@@ -4,8 +4,8 @@ Keep this short. Bullet points, a small table and one diagram or code trace are 
 
 Name: Lucas Palmhager
 Exact Unity version: 6000.3.26f1
-Checkpoint commit / repository: baseline commit
-Current stage and anything unfinished: stage 1
+Checkpoint commit / repository: week 1 commit
+Current stage and anything unfinished:
 
 ## Initial prediction
 
@@ -41,12 +41,15 @@ Live walkthrough checked by / recording link if used:
 
 ## One correction and one independent check
 
-The original weakness and why it happened:
-What I changed and why it addresses the cause:
+The original weakness and why it happened: The AI didn't go for the scrap that we wanted it to go to, or tried to go for unreachable scrap. This happened because the script didn't have checks for if the scrap was in vision, blocked, or reachable.
+
+What I changed and why it addresses the cause: Added a method called *IsEligable*, that checks if the scrap is accessable with the 3 constrains it has on it (vision, blocked, remembered). This adresses the problem because it makes the AI look a bit smarter, if it had walked past a scrap while going for another.
+It remembers it, so it knows that scrap exist in the play area.
+
 My counterexample or experiment: prediction, observed result, and one limitation:
 
 ## Collaboration and help
 
-People I discussed or playtested with:
+People I discussed or playtested with: Jonas, Erik, Anton Sellbom, Casper A and Darren
 Code, sources or substantive tools/AI assistance I used, and how I verified them:
 If unfinished: what works, exact reproduction steps, and the help I need:
