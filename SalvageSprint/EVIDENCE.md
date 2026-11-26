@@ -30,11 +30,11 @@ This is because in PickupSensor.cs it adds candidates to the rival but it doesn'
 | Scenario | Predicted result | Observed result and short evidence / remaining issue |
 |---|---|---|
 | Normal loop and restart | | |
-| Carrying cargo | | |
-| Hidden / remembered pickup | | |
-| Target taken | | |
-| Unreachable target | | |
-| No usable pickup | | |
+| Carrying cargo |walk back to base | prediciton was correct |
+| Hidden / remembered pickup |walk to the remembered target if no other are in fov | prediciton was correct|
+| Target taken |walk to second cargo in priority | prediciton was correct|
+| Unreachable target |explore for new target or take the second target |prediciton was correct |
+| No usable pickup |explore the map to maybe find hidden pick ups |prediciton was correct |
 
 Supplied test result, with any added tests identified:
 Live walkthrough checked by / recording link if used:
